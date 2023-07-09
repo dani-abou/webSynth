@@ -4,6 +4,8 @@ Web synths is an interactive musical expression tool. The user simply plays move
 
 ## Server
 
+The server exists as an extremely important aspect of the system. Originally, I attempted to host the server on the admin computer, minimizing the possibility of errors, but I quickly discovered that client web apps cannot communicate with URLs that lack SSL certificates, and instead of buying a domain for this project, I decided to host on a free server hosting site: Glitch.com. I highly recommend this service for this project, because of how easy it is to quickly setup. The `server.js` and `package.json` files in the `server` folder should be replicated in your Glitch.com project. Once you begin listening on your server port, get the URL endpoint of the Websocket connection, and go on to setting up the next steps.  
+
 ## Admin
 
 The admin computer is the central point of the whole system. You must have Max MSP installed on your device. Additionally, in the file [receiver.js](adminReceiver/receiver.js), you must point the websocket towards your own server URL, on line 27. Then simply open the `synth.maxpat` file, and click the `script start` message in the top right of the patch. 
